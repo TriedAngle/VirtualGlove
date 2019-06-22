@@ -1,9 +1,11 @@
 #include <Arduino.h>
+#include "testing_files/calc_hyp.h"
 
 void setup() {
-  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(LED_BUILTIN, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  calculate_hypotenuse();
 }
