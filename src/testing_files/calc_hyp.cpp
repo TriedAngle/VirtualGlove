@@ -25,7 +25,6 @@ void findSide(int x, int y)
 void calculate_hypotenuse(){
   int a;
   int b;
-  float result;
   Serial.print("Enter a side value: ");
   while(!Serial.available());
   a = readSerial();
