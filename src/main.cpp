@@ -1,5 +1,4 @@
 #include <Arduino.h>
-// #include "testing_files/calc_hyp.h"
 #include "sensors/flex.h"
 
 void setup() {
