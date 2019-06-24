@@ -63,13 +63,13 @@ void recordGyroRegisters() {
 // "Getter" Methods
 
 // processed Values
-void getAccForce(float& aX, long& aY, long& aZ){
+void getAccForce(float& aX, float& aY, float& aZ){
   aX = gForceX;
   aY = gForceY;
   aZ = gForceZ;
 }
 
-void getGyroRotation(float& gX, long& gY, long& gZ){
+void getGyroRotation(float& gX, float& gY, float& gZ){
   gX = rotX;
   gY = rotY;
   gZ = rotZ;
