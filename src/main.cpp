@@ -1,14 +1,16 @@
 #include <Arduino.h>
 #include "sensors/flex.h"
+#include "sensors/mpu.h""
 #include "sensors/transceiver.h"
 
+int finger[5];
+const int BAUD_RATE = 9600;
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(BAUD_RATE);
 }
 
 void loop() {
-  int finger[5];
   readFlexPins(finger[0], finger[1], finger[2], finger[3], finger[4]);
 
   for(int i = 0; i < 5; i++){
