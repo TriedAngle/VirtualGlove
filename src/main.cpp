@@ -10,18 +10,18 @@ const int BAUD_RATE = 9600;
 
 void setup() {
   Serial.begin(BAUD_RATE);
-  setupMPU();
+  //setupMPU();
 }
 
 void loop() {
-  recordGyroRegisters();
-  recordAccelRegisters();
-  getGyroRotation(rotation[0], rotation[1], rotation[2]);
-  getAccForce(force[0], force[1], force[2]);
+  // recordGyroRegisters();
+  // recordAccelRegisters();
+  // getGyroRotation(rotation[0], rotation[1], rotation[2]);
+  // getAccForce(force[0], force[1], force[2]);
   getAngles(finger[0], finger[1], finger[2], finger[3], finger[4]);
-  float allData[10] = {rotation[0], rotation[1], rotation[2], force[0], force[1], force[2], finger[0], finger[1], finger[2], finger[3]};
+  // float allData[10] = {rotation[0], rotation[1], rotation[2], force[0], force[1], force[2], finger[0], finger[1], finger[2], finger[3]};
 
-  Serial.println(finger[1]);
+  Serial.println(finger[2]);
 
   // Serial.println(String(finger[0]) + "|" + String(finger[1]) + "|"
   // + String(finger[2]) + "|" + String(finger[3]) + "|" + String(rotation[0]) + "|"
@@ -32,5 +32,5 @@ void loop() {
   //  Serial.print(finger[i]);
   //  Serial.print(" | ");
   //}
-  delay(50);
+  delay(100);
 }
